@@ -18,10 +18,10 @@ public class JsonTask extends AsyncTask<String, String, String> {
 
     private HttpURLConnection connection = null;
     private BufferedReader reader = null;
-    private final JsonTaskListener listener;
+    private JsonTaskListener listener = null;
 
     @SuppressWarnings("deprecation")
-    public JsonTask(JsonTaskListener listener) {
+    public JsonTask(JsonTaskListener listener, MainActivity mainActivity) {
         this.listener = listener;
     }
 
